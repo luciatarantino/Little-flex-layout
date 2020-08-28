@@ -1,0 +1,177 @@
+/*inizio css reset*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*fine css reset*/
+
+
+*{box-sizing: border-box}
+
+body{
+    font-family: 'EB Garamond', serif;
+    margin: 0 7px;
+
+    display: flex;
+    flex-flow: row wrap;
+    
+    
+}
+
+body > *{
+
+    padding: 20px;
+    width: 100%; 
+}
+
+h1{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Balsamiq Sans', cursive;
+    
+    font-size: 1.5em;
+    margin: .5em;
+}
+
+header{
+    background-color: #673AB7;
+    color: #fff;
+    margin-bottom: 20px;
+    /*anche header qui diventa flex container*/
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    background-color: #FFF8E1;
+    margin-bottom: 20px;
+}
+
+aside{
+    background-color: #EDE7F6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+aside.due{
+    background-color: #B39DDB;
+}
+aside img{
+    max-width: 100%;
+    height: auto;
+}
+
+footer p{
+    line-height: 40px;
+    margin-right: 20px;
+}
+footer{
+    color: #fff;
+    background-color: #673AB7;
+    
+    text-align: center;
+    /*anche footer qui diventa flex container*/
+    display: flex;
+    height: 150px;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+
+ /*tablet*/
+@media screen and (min-width: 600px){
+    aside {
+        width: 49%;
+    }
+    
+    aside.uno {
+        margin-right: 2%;
+    }
+     
+}
+
+
+
+/*desktop*/
+@media screen and (min-width: 1024px){
+    
+    body{
+        margin: 0;
+    }
+    
+    header{
+        order: 1;
+    }
+    
+    article{
+        width:50%;
+        margin-right: 2%;
+        order: 3;
+    }
+    
+    aside.uno{
+        width:23%;
+        order: 2;
+    }
+    
+    aside.due{
+        width:23%;
+        order: 4;
+    }
+    footer{
+        order: 5;
+    }
+    
+}
